@@ -21,6 +21,10 @@ const SearchBar = ({ setSearchTerm }) => {
     return () => clearTimeout(timer);
   }, [setSearchTerm, state]);
 
+  const updateValue = (event) => {
+    setState(event.currentTarget.value);
+  };
+
   return (
     <Wrapper>
       <Content>
@@ -28,7 +32,7 @@ const SearchBar = ({ setSearchTerm }) => {
         <input
           type='text'
           placeholder='Search Movie'
-          onChange={(event) => setState(event.currentTarget.value)}
+          onChange={updateValue}
           value={state}
         />
       </Content>

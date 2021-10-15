@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // Styles
 
-const ActorInfo = () => <div>Somthing Here</div>;
+const ActorInfo = () => {
+  return <div>Somethingggggg</div>;
+};
 
 export default ActorInfo;

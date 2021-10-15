@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import Movie from './components/Movie';
+import ActorInfo from './components/ActorInfo';
 import NotFound from './components/NotFound';
 
 // Styles
@@ -18,6 +19,7 @@ const App = () => (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/movie/:movieId' element={<Movie />} />
+      <Route path='/actor/:movieId' element={<ActorInfo />} />
       <Route path='/*' element={<NotFound />} />
     </Routes>
     <GlobalStyle />

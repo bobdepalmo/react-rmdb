@@ -6,12 +6,21 @@ export const Image = styled.img`
   max-width: 720px;
   transition: all 0.3s;
   object-fit: cover;
-  border-radius: 20px;
   animation: animateMovieThumb 0.5s;
-
-  :hover {
-    opacity: 0.8;
-  }
+  transition: transform 0.3s;
+  cursor: pointer;
+  ${(props) =>
+    props.clickable
+      ? `
+      &:hover {transform: scale(1.02);} 
+      &:active {transform: scale(1);} 
+      border-radius: 20px;`
+      : `
+      border-radius: 20px 0px 0px 20px;
+      @media screen and (max-width: 768px) {
+        border-radius: 20px 20px 0px 0px;
+      }
+      `};
 
   @keyframes animateMovieThumb {
     from {
